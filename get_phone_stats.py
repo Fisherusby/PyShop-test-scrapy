@@ -6,6 +6,8 @@ import pandas as pd
 
 DATA_FILE_NAME = 'phone_data.csv'
 
+MAX_SMARTPHONE = 100
+
 if __name__ == "__main__":
     settings = get_project_settings()
     SETTING = {
@@ -19,13 +21,15 @@ if __name__ == "__main__":
     }
 
     # for ozon.by
-    PhonesSpiders.start_urls = ['https://ozon.by/category/smartfony-15502/?sorting=rating']
-    PhonesSpiders.allowed_domains = ['ozon.by']
-    PhonesSpiders.PRODUCT_URL = 'https://ozon.by'
+    # PhonesSpiders.start_urls = ['https://ozon.by/category/smartfony-15502/?sorting=rating']
+    # PhonesSpiders.allowed_domains = ['ozon.by']
+    # PhonesSpiders.PRODUCT_URL = 'https://ozon.by'
 
     PhonesSpiders.custom_settings = {
         'LOG_LEVEL': 'ERROR',
     }
+
+    PhonesSpiders.MAX_SMARTPHONE = MAX_SMARTPHONE
 
     # delete old datafile
     if os.path.exists(DATA_FILE_NAME):
