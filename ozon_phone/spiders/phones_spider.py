@@ -102,7 +102,6 @@ class PhonesSpiders(scrapy.Spider):
         # get phone's title
         title = sel.xpath('//div[@data-widget="webProductHeading"]/h1/text()').get()
 
-
         yield {
             'title': title,
             'os': phone_os,

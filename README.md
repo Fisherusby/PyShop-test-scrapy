@@ -2,7 +2,7 @@
 
 <h2>QUICK START</h2>
 <pre class="notranslate">
-<code>$ pip install requirements.txt
+<code>$ pip install -r requirements.txt
 $ python get_phone_stats.py
 </code></pre>
 
